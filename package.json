@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts" : {
-    "start" : "babel-node tools/srcServer.js"
+    "prestart" : "babel-node tools/startMessage.js",
+    "start" : "babel-node tools/srcServer.js",
+    "lint": "node_modules/.bin/esw webpack.config.* src tools",
+    "lint:watch": "npm run lint -- --watch"
   },
   "dependencies": {
     "babel-polyfill": "6.8.0",
