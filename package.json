@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts" : {
-    "prestart" : "babel-node tools/startMessage.js",
-    "start" : "npm-run-all --parallel test:watch open:src lint:watch",
+  "scripts": {
+    "prestart": "babel-node tools/startMessage.js",
+    "start": "npm-run-all --parallel test:watch open:src lint:watch",
     "open:src": "babel-node tools/srcServer.js",
     "lint": "node_modules/.bin/esw webpack.config.* src tools",
     "lint:watch": "npm run lint -- --watch",
@@ -13,10 +13,12 @@
     "test:watch": "npm run test -- --watch"
   },
   "dependencies": {
+    "apollo-client": "^0.10.1",
     "babel-polyfill": "6.8.0",
     "bootstrap": "3.3.6",
     "jquery": "2.2.3",
     "react": "15.0.2",
+    "react-apollo": "^0.13.2",
     "react-dom": "15.0.2",
     "react-redux": "4.4.5",
     "react-router": "2.4.0",
